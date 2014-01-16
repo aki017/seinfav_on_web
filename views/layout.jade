@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title= (!title)? "Seinfav on Web" : title + " | Seinfav on Web"
+    meta(name="viewport", content="width=device-width,initial-scale=1, user-scalable=0")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    link(rel="apple-touch-icon", href="images/icon.png")
+    link(rel="apple-touch-startup-image". href="images/splash.png")
+    link(rel="icon", type="image/png", href="images/icon.png")
+
+    meta(name="twitter:card",        content="product")
+    meta(name="twitter:title",       content="Seinfav")
+    meta(name="twitter:description", content="Seinfavで世界をふぁぼろう！")
+    meta(name="twitter:image",       content="http://www.aki017.info/works/game/PiyoPiyo/images/splash.png")
+    meta(name="twitter:site",        content="@aki017")
+    meta(name="twitter:creator",     content="@aki017")
+    meta(name="twitter:data1",       content="Seinfav")
+    meta(name="twitter:label1",      content="Title")
+    
+    meta(property="og:title", content="Seinfav")
+    meta(property="og:type",  content="website")
+    meta(property="og:url",   content="http://www.aki017.info/works/iOS/Seinfav/")
+    meta(property="og:image", content="http://www.aki017.info/works/iOS/Seinfav/images/splash.png")
+    
+    script(src="//code.jquery.com/jquery-2.0.0.min.js")
+    script(src="//code.createjs.com/soundjs-0.5.2.min.js")
+    != js('common')
+    link(rel="stylesheet", href="Flat-UI/css/flat-ui.css")
+    != css("common")
+  body
+    block content

@@ -1,0 +1,3 @@
+[submodule "public/Flat-UI"]
+	path = public/Flat-UI
+	url = https://github.com/designmodo/Flat-UI.git

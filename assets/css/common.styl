@@ -1,0 +1,128 @@
+@import 'nib'
+
+#loading
+  position         absolute
+  top              0
+  right            0
+  bottom           0
+  left             0
+  padding-top      300px
+  overflow         none
+  background-color rgba(255,255,255,1)
+
+$circle
+  content          ""
+  display          block
+  background-color rgba(0,0,0,0)
+  border           5px           solid rgba(52,162,235,0.9)
+  opacity          .9
+  border-right     5px           solid rgba(0,0,0,0)
+  border-left      5px           solid rgba(0,0,0,0)
+  margin           0             auto
+#loading:before
+  @extend $circle
+  border-radius     50px
+  box-shadow        0         0  25px     #3498DB
+  width             50px
+  height            50px
+  animation    spinPulse 1s infinite ease-in-out
+#loading:after
+  @extend $circle
+  border-radius     40px
+  box-shadow        0            0  40px     #3498DB
+  width             40px
+  height            40px
+  position          relative
+  top               -55px
+  animation    spinoffPulse 1s infinite linear
+
+@keyframes spinPulse
+  0%
+    transform rotate(180deg)
+    opacity 0
+    box-shadow 0 0 1px #3498DB
+  50%
+    transform rotate(135deg)
+    opacity 1
+  100%
+    transform rotate(-360deg)
+    opacity 0
+@keyframes spinoffPulse
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+#tweets
+  width       100%
+  height      100%
+
+#tweets > div
+  font-size   2em
+  height      1.1em
+  width       100%
+  padding     3px
+  white-space nowrap
+  overflow    hidden
+  cursor      pointer
+
+#favbtn
+  position         fixed
+  z-order          9999
+  top              30%
+  left             0
+  right            100%
+  bottom           100%
+  width            100%
+  height           70%
+  background-image linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+
+body
+  margin 0
+  margin-top 3.6em
+
+#header
+  position    fixed
+  top 0
+  width    100%
+  height   2.8em
+  padding   0px
+  background rgba(255,255,255,0.8)
+
+#backbtn
+  font-size      2em
+  border-radius  2em
+  width          1.3em
+  height         1.3em
+  line-height:   1.2em
+  text-align     center
+  vertical-align middle
+  border         0.05em    solid #34495e
+
+#headertitle
+  vertical-align  middle 
+
+#targets
+  height                     100%
+  width                      100%
+  overflow                   auto
+  -webkit-overflow-scrolling touch
+
+#expbar
+  position    fixed
+  width       100%
+  top 2.8em
+  background rgba(255,255,255,0.7)
+#expbar_bar
+  float            left
+  height           1em
+  background-color #34495e
+
+#expbar_text
+  float       right
+  height      1em
+  line-height 1em
+  overflow    none
+  text-align  right
+  white-space nowrap
+
